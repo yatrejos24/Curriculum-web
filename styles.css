@@ -1,0 +1,149 @@
+/* Contenedor principal */
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+/* Menu principal propiedades*/
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    
+    list-style: none;
+    margin: 0; 
+    background: #343232;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background: #C5C0C0;
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
+/* Elementos dentro del contenedor */
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+/* Encabezado */
+.header 
+{
+    background:#000000;
+}
+/*titulo_ nombre*/
+.centrar{
+    display: grid !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: left !important;
+}
+.titulo_nombre
+{
+ font-size: 20px;
+    color: white !important;
+ text-align: left;
+ color: black;
+ font-weight: bold;
+
+}
+/*titulo_ nombre*/
+ .vinc
+{
+    font-size: 20px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+}
+
+/*información usuario*/
+.nombre_footer
+{
+    text-align: center;
+}
+
+/* Pie de página */
+.footer {
+
+    background:#000000;
+    color: white;
+}
+
+/* Contenido principal */
+.main {
+    text-align: left;
+    background: deepskyblue;
+}
+
+/* Barra lateral 1 */
+.aside-1 {
+    background: gold;
+}
+
+/* Barra lateral 2 */
+.aside-2 {
+    background: hotpink;
+}
+
+/* Reglas de estilo para tamaños de pantalla específicos */
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+    }
+
+    .aside-1 {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+/* Estilos globales */
+body {
+    padding: 2em;
+}
