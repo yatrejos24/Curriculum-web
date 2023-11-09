@@ -48,7 +48,12 @@
       border-bottom: none;
     }
   }
+/* Propiedades del contacto */
+  #contacto
+  {
+   padding-bottom: 5%;
 
+  }
 /* Elementos dentro del contenedor */
 .wrapper > * {
     padding: 10px;
@@ -70,7 +75,7 @@
 .titulo_nombre
 {
  font-size: 20px;
-    color: white !important;
+ color: white !important;
  text-align: left;
  color: black;
  font-weight: bold;
